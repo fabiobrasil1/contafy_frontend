@@ -20,4 +20,9 @@ export const queryKeys = {
     recentTransactions: () => [...queryKeys.dashboard.all, "recentTransactions"] as const,
     balanceOverTime: () => [...queryKeys.dashboard.all, "balanceOverTime"] as const,
   },
+  settings: {
+    all: ["settings"] as const,
+    profile: () => [...queryKeys.settings.all, "profile"] as const,
+    preferences: () => [...queryKeys.settings.all, "preferences"] as const,
+  },
 } as const;
