@@ -14,4 +14,10 @@ export const queryKeys = {
     list: (filters?: unknown) => [...queryKeys.transactions.all, "list", filters] as const,
     detail: (id: string) => [...queryKeys.transactions.all, "detail", id] as const,
   },
+  dashboard: {
+    all: ["dashboard"] as const,
+    summary: () => [...queryKeys.dashboard.all, "summary"] as const,
+    recentTransactions: () => [...queryKeys.dashboard.all, "recentTransactions"] as const,
+    balanceOverTime: () => [...queryKeys.dashboard.all, "balanceOverTime"] as const,
+  },
 } as const;

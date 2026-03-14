@@ -10,3 +10,4 @@ export type {
   TransactionStatus,
   TransactionType,
 } from "./transaction";
+export type { DashboardSummary, BalancePoint } from "./dashboard";
